@@ -64,7 +64,7 @@ namespace NoteTakingApp
             if (editing)
             {
                 notes.Rows[previousNotes.CurrentCell.RowIndex]["Title"] = titleBox.Text;
-                notes.Rows[previousNotes.CurrentCell.RowIndex]["Notes"] = noteBox.Text;
+                notes.Rows[previousNotes.CurrentCell.RowIndex]["Note"] = noteBox.Text;
             }
             else
             {
@@ -75,6 +75,13 @@ namespace NoteTakingApp
             noteBox.Text = "";
 
             editing = false;
+        }
+
+        private void previousNotes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            titleBox.Text = notes.Rows[previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
+            noteBox.Text = notes.Rows[previousNotes.CurrentCell.RowIndex].ItemArray[1].ToString();
+            editing = true;
         }
     }
 }
