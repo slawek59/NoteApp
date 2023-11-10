@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.titleBox = new System.Windows.Forms.TextBox();
+            this.noteBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.previousNotes = new System.Windows.Forms.DataGridView();
@@ -40,20 +40,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.previousNotes)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // titleBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(404, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(384, 26);
-            this.textBox1.TabIndex = 0;
+            this.titleBox.Location = new System.Drawing.Point(404, 37);
+            this.titleBox.Name = "titleBox";
+            this.titleBox.Size = new System.Drawing.Size(384, 26);
+            this.titleBox.TabIndex = 0;
             // 
-            // textBox2
+            // noteBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(404, 98);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(384, 340);
-            this.textBox2.TabIndex = 1;
+            this.noteBox.Location = new System.Drawing.Point(403, 98);
+            this.noteBox.Multiline = true;
+            this.noteBox.Name = "noteBox";
+            this.noteBox.Size = new System.Drawing.Size(384, 340);
+            this.noteBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -148,8 +148,8 @@
             this.Controls.Add(this.previousNotes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.noteBox);
+            this.Controls.Add(this.titleBox);
             this.Name = "NoteTaker";
             this.Text = "Note Taker";
             this.Load += new System.EventHandler(this.NoteTaker_Load);
@@ -161,8 +161,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox titleBox;
+        private System.Windows.Forms.TextBox noteBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView previousNotes;
